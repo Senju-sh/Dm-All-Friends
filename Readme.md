@@ -9,7 +9,7 @@ Bienvenue dans le README pour le script **DM All Friends** utilisant Discord.js 
 
 - **Node.js v18**: Assurez-vous d'avoir Node.js v18 installé sur votre PC. Cette version est recommandée pour garantir que toutes les fonctionnalités fonctionnent correctement. 📦
 
-Vous pouvez télécharger Node.js v18 ici: [Node.js](https://nodejs.org/dist/v18.17.0/node-v18.17.0-x64.msi) (Windows x64)
+Vous pouvez télécharger Node.js v18 ici: [Node.js (Windows x64)](https://nodejs.org/dist/v18.17.0/node-v18.17.0-x64.msi) 
 
 ## 🛠️ Installation
 
