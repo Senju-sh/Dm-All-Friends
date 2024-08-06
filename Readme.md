@@ -36,7 +36,7 @@ Vous pouvez télécharger Node.js v18 ici: [Node.js](https://nodejs.org/dist/v18
 
 1. **Allez dans le `config.json`** dans le répertoire racine du projet et ajoutez votre token Discord et le message qu'ils reçevront :
 
-    ```
+    ```json
     {
     "token": "TON TOKEN ICI",
     "msg": "TON MESSAGE ICI"
@@ -51,3 +51,5 @@ Pour démarrer le bot, utilisez la commande suivante dans votre terminal :
 node index.js
 ```
 Votre script devrait maintenant être en ligne et prêt à envoyer des messages privés à tous vos amis sur Discord. 📨
+
+[Discord](https://discord.gg/stealy) | [Selfbot](https://github.com/Senju-sh/SPEED-SELFBOT)
