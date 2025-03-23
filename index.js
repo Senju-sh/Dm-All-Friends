@@ -1,4 +1,3 @@
-const fetch = require('node-fetch');
 const Discord = require('discord.js-selfbot-v13');
 const client = new Discord.Client({ checkUpdate: false });
 const config = require('./config.json')
