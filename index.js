@@ -1,24 +1,32 @@
-const Discord = require('discord.js-selfbot-v13');
-const client = new Discord.Client({ checkUpdate: false });
-const config = require('./config.json')
-console.log("https://senju.cc/")
-client.on('ready', async () => {
-    let i = 1
-    console.log("DM ALL DÉMARRÉ")
-    for (const friend of client.relationships.friendCache.map(r => r)) {
-        try {
-            await friend.send(config.msg.replaceAll('{user}', friend))
-            console.log(`${friend.globalName || friend.username} : DM RÉUSSI | ${i}`);
-            await client.sleep(100)
-            i++
-        } catch { console.log(`${friend.globalName || friend.username} : DM ÉCHOUÉ`) }
-    }
-    console.log("DM TERMINÉ")
-}).login(config.token);
-async function errorHandler(error) {
-    if (error.code === 0) return;
-    if (error.code === 400) return;
-    console.log(`[ERROR] ${error}`);
-};
-process.on("unhandledRejection", errorHandler);
-process.on("uncaughtException", errorHandler);
+const { Client } = require('vainty.js');
+const s = require("./config.json");
+const c = new Client({
+   http: {
+      headers: {
+         "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) discord/1.0.9226 Chrome/138.0.7204.251 Electron/37.6.0 Safari/537.36"
+      }
+   },
+   ws: {
+      presence: {
+         status: 'dnd',
+         afk: false
+      }
+   }
+});
+
+c.on('ready', async () => {
+   let d = Date.now()
+   let n = 0;
+   console.log(`[+] DM started - Estimated time is ${Math.floor((c.user.friends.size * 25000) / 60000)} min(s) and ${Math.floor(((c.user.friends.size * 25000) % 60000) / 1000)} second(s)`);
+   for (const f of c.user.friends.map(r => r)) {
+      try {
+         await f.send(s.txt.replaceAll("{user}", `<@${f.id}>`)).then(() => console.log(`[${++n}] - ${f.username} - DM SUCCESS`)).catch(() => console.log(`[${++n}] - ${f.username} - DM FAIL`));
+         await c.sleep(25000);
+      } catch (e) {
+         console.log(e);
+      }
+   }
+   console.log(`[+] DM finished in ${Math.floor((Date.now() - d) / 60000)} min(s) and ${Math.floor(((Date.now() - d) % 60000) / 1000)} second(s)`);
+});
+
+c.login(s.token);

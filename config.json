@@ -1,4 +1,4 @@
 {
-    "token": "TON TOKEN ICI",
-    "msg": "TON MESSAGE ICI"
+   "token": "Discord User Token Here",
+   "txt": "Your Text Here\nYou can use {user} to mention the user in text."
 }

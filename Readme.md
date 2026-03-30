@@ -1,55 +1,62 @@
-# 📬 DM All Friends Script for Discord.js v13
+# 📬 *DM Friends Script for Discord*
 
-Bienvenue dans le README pour le script **DM All Friends** utilisant Discord.js v13 ! 🎉 Ce guide vous expliquera comment utiliser ce script et s'assurera que vous avez tout ce dont vous avez besoin pour le faire fonctionner correctement.
+*Welcome to the README for the **DM Friends** script using [vainty.js](https://github.com/vainty-js/Vainty.js)! 🎉 This guide will walk you through how to use the script and make sure you have everything you need to get it running properly.*
 
-## 🚨 Avertissement
-**Je ne suis pas responsable de ce que vous ferez avec ce script. Utilisez-le à vos propres risques !** 🚨
+## 🚨 *Warning*
+***I am not responsible for what you choose to do with this script. Use it at your own risk!*** 🚨
 
-## 📋 Prérequis
+## 📋 *Prerequisites*
 
-- **Node.js v18**: Assurez-vous d'avoir Node.js v18 installé sur votre PC. Cette version est recommandée pour garantir que toutes les fonctionnalités fonctionnent correctement. 📦
+> ***Make sure you have [Node.js v22+](https://nodejs.org/fr/download) installed on your PC.***  
+> ***Make sure you have [Git](https://git-scm.com/) installed on your PC (needed to download this repo from bash).***
 
-Vous pouvez télécharger Node.js v18 ici: [Node.js (Windows x64)](https://nodejs.org/dist/v18.17.0/node-v18.17.0-x64.msi) 
+## 🛠️ *Installation*
 
-## 🛠️ Installation
-
-1. **Clonez ce dépôt** sur votre machine locale :
+1. **Clone this repository to your local machine**
 
     ```bash
-    git clone https://github.com/Senju-sh/Dm-All-Friends.git
+    git clone https://github.com/xp-ws/Dm-All-Friends
     ```
 
-2. **Naviguez vers le répertoire du projet** :
+2. **Navigate to the project directory**
 
     ```bash
     cd Dm-All-Friends-main
     ```
 
-3. **Installez les dépendances** :
+3. **Install dependencies**
 
     ```bash
-    npm i npm i node-fetch@cjs
-    npm i discord.js-selfbot-v13
+    npm i ffi-napi
+    npm i vainty.js@latest
     ```
 
-## ⚙️ Configuration
+## ⚙️ *Configuration*
 
-1. **Allez dans le `config.json`** dans le répertoire racine du projet et ajoutez votre token Discord et le message qu'ils reçevront :
+1. ***Go to the `config.json` file in the project's root directory and add your Discord token along with the message users will receive.***
 
     ```json
     {
-    "token": "TON TOKEN ICI",
-    "msg": "TON MESSAGE ICI"
+      "token": "User Token Here",
+      "txt": "Your Text Here\nYou can use {user} to mention the user in the text."
     }
     ```
 
-## 🚀 Utilisation
+## 🚀 *Usage*
 
-Pour démarrer le bot, utilisez la commande suivante dans votre terminal :
-
+*To start the script, use the following command in your terminal :*
 ```bash
 node index.js
 ```
-Votre script devrait maintenant être en ligne et prêt à envoyer des messages privés à tous vos amis sur Discord. 📨
+*Your script should now be online and ready to send private messages to all your friends on Discord. 📨*
 
-[Discord](https://discord.gg/stealy) | [Selfbot](https://github.com/Senju-sh/SPEED-SELFBOT)
+## ⚠️ *Disclaimer*
+
+> *This project is provided for educational and research purposes only.*    
+> *By using this repository, you acknowledge that :*  
+> 
+> *You are solely responsible for how you use the code.*  
+> *You must comply with Discord’s Terms of Service, Community Guidelines, and all applicable laws.*  
+> *The maintainers of this repository do not encourage, endorse, or assume responsibility for any misuse, automation abuse, or violation of platform rules.*  
+> *All actions performed with this code are entirely at your own risk.*  
+> *If you choose to use this project, you must ensure that your usage is lawful, compliant, and does not harm or disrupt any service or user.*
